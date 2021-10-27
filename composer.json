@@ -1,0 +1,21 @@
+{
+    "name": "devwl/email",
+    "type": "project",
+    "require": {
+        "swiftmailer/swiftmailer": "^6.3",
+        "symfony/validator": "^5.3",
+        "symfony/http-foundation": "^5.3",
+        "symfony/security-csrf": "^5.3"
+    },
+    "autoload": {
+        "psr-4": {
+            "Devwl\\Email\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "DevWL",
+            "email": "w.liszkiewicz@gmail.com"
+        }
+    ]
+}
