@@ -10,7 +10,6 @@ require "vendor/autoload.php";
  */
 /** @var Session $session */
 $session = new Session();
-var_dump($session->isStarted());
 if(!$session->isStarted()){
     $session->start();
 }
@@ -42,5 +41,13 @@ $csrf = $csrfProvider->getToken("main")->getValue();
         <input type="submit" name="submit" value="submit"><br>
         <input type="hidden" name="token" id="token" value="<?= $csrf ?>">
     </form>
+    <?php
+        /**
+         * Print messages from falshbag
+         */
+        foreach ($session->getFlashBag()->get("message") as $key => $m) {
+            echo "<p>{$m}</p>";
+        }
+    ?>
 </body>
 </html>

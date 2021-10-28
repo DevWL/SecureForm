@@ -156,20 +156,11 @@ if($_POST["submit"] && array_sum($error) == 0){
     }
 }
 
-
-/**
- * Print messages from falshbag
- */
-foreach ($session->getFlashBag()->get("message") as $key => $m) {
-    echo "<p>{$m}</p>";
-}
-
 /**
  * Debug - Display num of errors in each ConstraintViolationList
  */
-print_r($error);
+// print_r($error);
 
 
 
-// header("Location: ./index.php");
-die();
+header("Location: ./index.php");
